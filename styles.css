@@ -1,0 +1,156 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ 
+ body {
+     font-size: 2 rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 2;    
+ }
+
+ body {
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+ 
+
+header {
+
+    text-align: center;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns in a single row */
+    gap: 50px; /* Space between items */
+    padding: 50px; /* Padding for the main area */
+
+}
+
+.text-div {
+    height: 300px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.text-div {
+    min-width: 50px; /* Minimum width */
+    max-width: 0px; /* Maximum width */
+}
+
+   
+
+main {   
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    position: relative; /* Important for absolute positioning of images */
+    overflow: visible;
+    width: 100%;
+    height: 100vp;
+    display: -moz-grid-line; /* Or use flex depending on your choice */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* For Grid Layout */
+    gap: 100px; /* Space between images */
+    padding: 70px; /* Optional padding */
+    background-size: cover; /* Ensures the gradient fills the area */
+}
+
+
+
+
+.text-div {
+    background-color: rgba(84, 83, 83, 0.2); /* More transparent background */
+    border: 1px solid rgba(204, 204, 204, 0.5); /* Softer border */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 30px 0;
+    box-shadow: none; /* Remove shadow for a flatter look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the box spans the full width */
+    max-width: 600px; /* Limit the maximum width */
+    overflow: visible; /* Control overflow */
+    word-wrap: break-word; /* Allow words to break for long sentences */
+}
+
+.text-div {
+    background-color: rgba(84, 83, 83, 0.2);  
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 30px auto; /* Center the boxes */
+    box-shadow: none;
+    display: block; /* Use block display */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit maximum width */
+    overflow: hidden; /* Hide overflow */
+    word-wrap: break-word; /* Allow words to break */
+    white-space: normal; /* Allow normal text wrapping */
+}
+
+
+
+.img-div {
+    position: absolute; /* Allow images to be positioned freely */
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images are displayed as block elements */
+    margin: 20px; /* Add spacing around images */
+    visibility: hidden; /* Hide images initially */
+}
+
+.hidden {
+    visibility: hidden; /* Hide elements initially */
+}
+
+p {
+    margin-top: 20px;
+}
+
+.text-div {
+    position: relative;
+    padding: 30px;
+    overflow: hidden; /* Ensures hidden text does not overflow */
+    color: rgb(0, 0, 0);
+}
+
+.text-div:hover{
+    transform: scale(1.25)
+
+}
+
+
+.hidden-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+    color:rgb(255, 255, 255);
+}
+
+.text-div:hover .hidden-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
